@@ -1,0 +1,167 @@
+* {
+    font-size: 24px;
+    font-family: 'Space Mono', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #AEE0DB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.attribution{
+    font-size: 11px;
+    text-align: center;
+    visibility: hidden;
+}
+
+.attribution a{
+    color: hsl(228, 45%, 44%);
+}
+
+p{
+    font-size: 15px;
+}
+
+.icon{
+    font-size: 18px;
+    color: hsl(186, 14%, 43%);
+}
+
+.icons{
+    width: 3%;
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 8px;
+}
+/*contenedor principal*/
+.contenedor{
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    width: 900px;
+}
+/*colores botones*/
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.azulMarinoColor{
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+}
+
+.MarinoClaroColor{
+    background-color: #3D9D8A;
+    color: white;
+}
+
+.ColorGrisClaro{
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+}
+
+/*input*/
+
+.imputext{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+input{
+    background-color: hsl(189, 41%, 97%);
+}
+
+/*contenedor de botones*/
+#zonabotones{
+    width: 90%;  
+}
+
+.zona1{
+    width: 390px;
+}
+
+button {
+    margin: 5px;
+    text-align: center;
+}
+
+.azulMarinoColor,
+.MarinoClaroColor{
+    font-size: 20px;
+    width: 100px;
+}
+
+.ColorGrisClaro{
+    font-size: 19px;
+    width: 100px;
+}
+
+/*estilos hover butones*/
+
+.azulMarinoColor:hover,
+.MarinoClaroColor:hover{
+    background-color: #3bb89f;
+}
+
+.ColorGrisClaro:hover{
+    background-color: hsl(189, 41%, 90%);
+}
+
+/*contenedor 2*/
+.zona2 {
+    width: 50%;
+    float: right;
+}
+.container2 {
+    width: 450px;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    margin-top: -330px;
+    padding: 20px 30px;
+    float: right;
+}
+
+/*ESTILOS P*/
+.container2 .p1{
+    margin: 10px;
+}
+
+
+.p1{
+    color: white;
+    font-size: 18px;
+}
+
+.p2{
+    font-size: 15px;
+    color: hsl(186, 14%, 43%);
+}
+
+/*estilo button RESET*/
+.RESET{
+    background-color: #3bb89f;
+    color: hsl(183, 100%, 15%);
+    font-size: 20px;
+    width: 380px;
+    margin-top: 135px;
+}
+
+.boton2{
+    height: 173px;
+    text-align: center;
+}
+
