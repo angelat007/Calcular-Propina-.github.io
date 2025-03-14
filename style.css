@@ -41,6 +41,17 @@ p{
     margin-left: 5px;
     margin-top: 8px;
 }
+
+.spliter{
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%); /* Para centrar horizontalmente */
+    font-weight: bold;
+    letter-spacing: 5px;
+    line-height: 1.2;
+    color: hsl(183, 100%, 15%);
+}
 /*contenedor principal*/
 .contenedor{
     background-color: white;
@@ -55,14 +66,9 @@ button {
     padding: 10px 20px;
     cursor: pointer;
 }
-
+.MarinoClaroColor,
 .azulMarinoColor{
     background-color: hsl(183, 100%, 15%);
-    color: white;
-}
-
-.MarinoClaroColor{
-    background-color: #3D9D8A;
     color: white;
 }
 
@@ -81,8 +87,27 @@ button {
     text-align: right;
 }
 
+
 input{
     background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 20%);
+}
+
+.botonInput{
+    text-align: right;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.InputPeople{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: right;
 }
 
 /*contenedor de botones*/
@@ -105,20 +130,33 @@ button {
     width: 100px;
 }
 
-.ColorGrisClaro{
+.botonInput {
     font-size: 19px;
     width: 100px;
 }
 
 /*estilos hover butones*/
+.imputext:hover {
+    border: 2px solid #3bb89f;
+}
+
+.InputPeople:hover {
+    border: 2px solid red;
+}
 
 .azulMarinoColor:hover,
 .MarinoClaroColor:hover{
     background-color: #3bb89f;
+    color: hsl(183, 100%, 15%);
 }
 
-.ColorGrisClaro:hover{
+.botonInput:hover {
     background-color: hsl(189, 41%, 90%);
+    border: 2px solid #3bb89f;
+}
+
+.RESET:hover{
+    background-color: #4aeccc;
 }
 
 /*contenedor 2*/
@@ -140,6 +178,9 @@ button {
     margin: 10px;
 }
 
+.pContainer{
+    width: 150px;
+}
 
 .p1{
     color: white;
@@ -165,3 +206,84 @@ button {
     text-align: center;
 }
 
+/*parte responsiva*/
+@media (max-width: 375px) {
+
+    .contenedor{
+        height: 550px;
+        width: 320px;
+        margin-top: 150px;
+    }
+
+    .zona1{
+        width: 250px;
+    }
+
+    .InputPeople,
+    .imputext {
+        width: 250px;
+        height: 40px;
+    }
+
+    input:hover{
+        border: none;
+    }
+
+    .botonInput,
+    .MarinoClaroColor,
+    .azulMarinoColor {
+        width: 110px;
+        height: 40px;
+    }
+
+    #zonabotones{
+        width: 250px;
+        margin-top: -35px;
+    }
+
+    #container-numberPeople{
+        margin-top: -25px;
+    }
+
+    #contenedor-bill{
+        margin-top: -20px;
+    }
+
+    .spliter{
+        margin-top: -15px;
+    }
+    .zona2{
+        width: 320px;
+        margin-top: 330px;
+    }
+
+    .container2{
+        height: 160px;
+        width: 250px;
+    }
+
+    .boton2{
+        margin-left: -20px;
+        height: 50px;
+    }
+
+    .pContainer{
+        margin-top: -15px;
+    }
+
+    .p2{  
+        font-size: 10px;
+        color: hsl(186, 14%, 43%);
+    }
+
+    .p1{
+        font-size: 10px;
+    }
+
+    .RESET{
+        margin-top: 10px;
+        margin-right: -20px;
+        width: 200px;
+        height: 40px;
+    }
+}
