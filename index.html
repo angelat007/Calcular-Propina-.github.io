@@ -1,71 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./Media/favicon-32x32.png">
-  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css">
-  <title>App Calculador de propinas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="styles icon" href="./Media/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <title>App Calculador de propinas</title>
 </head>
 
 <body>
-  <div class="spliter">
-    <h1>S P L I <br> T T E R</h1>
-  </div>
-  <div class="contenedor">
-    <div class="zona1">
-      <div id="contenedor-bill">
-      <p>Bill</p>
-      <div id="imput">
-        <div class="icons">
-          <span class="icon">$</span>
-        </div>
-        <input class="imputext" type="text" placeholder="0">
-      </div>
-      </div>
-      <br>
-      <div id="zonabotones">
-        <p>Select Tip %</p>
-        <button class="azulMarinoColor">5%</button>
-        <button class="azulMarinoColor">10%</button>
-        <button class="MarinoClaroColor">15%</button>
-        <button class="azulMarinoColor">25%</button>
-        <button class="azulMarinoColor">50%</button>
-        <input type="text" placeholder="Custom" class="botonInput">
-      </div>
-      <br>
-      <div class="conteiner">
-        <div id="container-numberPeople">
-          <p>Number of People</p>
-          <div id="imput">
-            <div class="icons">
-              <span class="icon">👤</span>
+    <main class="container">
+        <h1>SPLITTER</h1>
+        <div class="calculator">
+            <div class="input-area">
+                <label>Bill</label>
+                <input type="number" id="bill" placeholder="0" min="0">
+
+                <label>Select Tip %</label>
+                <div class="tip-buttons">
+                    <button class="tip-btn" data-tip="5">5%</button>
+                    <button class="tip-btn" data-tip="10">10%</button>
+                    <button class="tip-btn" data-tip="15">15%</button>
+                    <button class="tip-btn" data-tip="25">25%</button>
+                    <button class="tip-btn" data-tip="50">50%</button>
+                    <input type="number" id="custom-tip" placeholder="Custom" min="0">
+                </div>
+
+                <label>Number of People</label>
+                <input type="number" id="people" placeholder="0" min="1">
+                <small id="error-msg" class="hidden">Can't be zero</small>
             </div>
-            <input class="InputPeople" type="text" placeholder="0">
-          </div>
+
+            <div class="result-area">
+                <div class="result">
+                    <div>
+                        <p>Tip Amount<br><span>/ person</span></p>
+                        <p class="amount" id="tip-amount">$0.00</p>
+                    </div>
+                    <div>
+                        <p>Total<br><span>/ person</span></p>
+                        <p class="amount" id="total-amount">$0.00</p>
+                    </div>
+                </div>
+                <button id="reset-btn" disabled>RESET</button>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="zona2">
-      <div class="container2">
-        <div class="pContainer">
-          <p class="p1">Tip Amount</p>
-          <p class="p2">/ person</p>
-          <p class="p1">Total</p>
-          <p class="p2">/ person</p>
-        </div>
-        <div class="boton2">
-          <button class="RESET">RESET</button>
-        </div>
-      </div>
-    </div>
-    <!--<div class="attribution">
-      Realizado por: <a href="#">Tu Angel</a>.
-    </div>-->
-  </div>
-  <script src="scrips.js"></script>
+    </main>
+
+    <script src="scrips.js"></script>
 </body>
 
 </html>

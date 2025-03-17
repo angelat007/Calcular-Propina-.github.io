@@ -1,289 +1,139 @@
+:root {
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --very-dark-cyan-disable:hsl(184, 93%, 18%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+    --font: 'Space Mono', monospace;
+}
+
 * {
-    font-size: 24px;
-    font-family: 'Space Mono', Arial, Helvetica, sans-serif;
-    font-weight: 700;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: #AEE0DB;
+body {
+    font-family: var(--font);
+    background: var(--light-grayish-cyan);
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    letter-spacing: 10px;
+    color: var(--dark-grayish-cyan);
+    margin-bottom: 30px;
+}
+
+.calculator {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-}
-
-.attribution{
-    font-size: 11px;
-    text-align: center;
-    visibility: hidden;
-}
-
-.attribution a{
-    color: hsl(228, 45%, 44%);
-}
-
-p{
-    font-size: 15px;
-}
-
-.icon{
-    font-size: 18px;
-    color: hsl(186, 14%, 43%);
-}
-
-.icons{
-    width: 3%;
-    position: absolute;
-    margin-left: 5px;
-    margin-top: 8px;
-}
-
-.spliter{
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%); /* Para centrar horizontalmente */
-    font-weight: bold;
-    letter-spacing: 5px;
-    line-height: 1.2;
-    color: hsl(183, 100%, 15%);
-}
-/*contenedor principal*/
-.contenedor{
-    background-color: white;
-    border-radius: 20px;
-    padding: 30px;
-    width: 900px;
-}
-/*colores botones*/
-button {
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-.MarinoClaroColor,
-.azulMarinoColor{
-    background-color: hsl(183, 100%, 15%);
-    color: white;
-}
-
-.ColorGrisClaro{
-    background-color: hsl(189, 41%, 97%);
-    color: hsl(183, 100%, 15%);
-}
-
-/*input*/
-
-.imputext{
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    text-align: right;
-}
-
-
-input{
-    background-color: hsl(189, 41%, 97%);
-    color: hsl(183, 100%, 20%);
-}
-
-.botonInput{
-    text-align: right;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 10px;
-    cursor: pointer;
-    margin: 5px;
-}
-
-.InputPeople{
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    text-align: right;
-}
-
-/*contenedor de botones*/
-#zonabotones{
-    width: 90%;  
-}
-
-.zona1{
-    width: 390px;
-}
-
-button {
-    margin: 5px;
-    text-align: center;
-}
-
-.azulMarinoColor,
-.MarinoClaroColor{
-    font-size: 20px;
-    width: 100px;
-}
-
-.botonInput {
-    font-size: 19px;
-    width: 100px;
-}
-
-/*estilos hover butones*/
-.imputext:hover {
-    border: 2px solid #3bb89f;
-}
-
-.InputPeople:hover {
-    border: 2px solid red;
-}
-
-.azulMarinoColor:hover,
-.MarinoClaroColor:hover{
-    background-color: #3bb89f;
-    color: hsl(183, 100%, 15%);
-}
-
-.botonInput:hover {
-    background-color: hsl(189, 41%, 90%);
-    border: 2px solid #3bb89f;
-}
-
-.RESET:hover{
-    background-color: #4aeccc;
-}
-
-/*contenedor 2*/
-.zona2 {
-    width: 50%;
-    float: right;
-}
-.container2 {
-    width: 450px;
-    background-color: hsl(183, 100%, 15%);
+    gap: 20px;
+    background: var(--white);
+    padding: 20px;
     border-radius: 15px;
-    margin-top: -330px;
-    padding: 20px 30px;
-    float: right;
+    flex-wrap: wrap;
+    box-shadow: 2px 0px 10px var(--dark-grayish-cyan);
 }
 
-/*ESTILOS P*/
-.container2 .p1{
-    margin: 10px;
+.input-area,
+.result-area {
+    flex: 1 1 300px;
 }
 
-.pContainer{
-    width: 150px;
+label {
+    display: block;
+    margin-top: 20px;
+    color: var(--dark-grayish-cyan);
+    font-size: 14px;
 }
 
-.p1{
-    color: white;
-    font-size: 18px;
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    border: none;
+    background: var(--very-light-grayish-cyan);
+    border-radius: 8px;
+    text-align: right;
 }
 
-.p2{
-    font-size: 15px;
-    color: hsl(186, 14%, 43%);
+.tip-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
 }
 
-/*estilo button RESET*/
-.RESET{
-    background-color: #3bb89f;
-    color: hsl(183, 100%, 15%);
+.tip-btn {
+    padding: 10px;
     font-size: 20px;
-    width: 380px;
-    margin-top: 135px;
+    background: var(--very-dark-cyan);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-.boton2{
-    height: 173px;
-    text-align: center;
+.tip-btn.active,
+.tip-btn:hover {
+    background: var(--strong-cyan);
 }
 
-/*parte responsiva*/
-@media (max-width: 375px) {
+.result-area {
+    background: var(--very-dark-cyan);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-    .contenedor{
-        height: 550px;
-        width: 320px;
-        margin-top: 150px;
-    }
+.result p {
+    color: var(--white);
+}
 
-    .zona1{
-        width: 250px;
-    }
+.amount {
+    font-size: 32px;
+    color: var(--strong-cyan);
+}
 
-    .InputPeople,
-    .imputext {
-        width: 250px;
-        height: 40px;
-    }
+#reset-btn {
+    margin-top: 20px;
+    padding: 15px;
+    background: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
 
-    input:hover{
-        border: none;
-    }
+#reset-btn:disabled {
+    background: var(--very-dark-cyan-disable);
+    cursor: not-allowed;
 
-    .botonInput,
-    .MarinoClaroColor,
-    .azulMarinoColor {
-        width: 110px;
-        height: 40px;
-    }
+}
 
-    #zonabotones{
-        width: 250px;
-        margin-top: -35px;
-    }
+.hidden {
+    display: none;
+}
 
-    #container-numberPeople{
-        margin-top: -25px;
-    }
+#error-msg {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
 
-    #contenedor-bill{
-        margin-top: -20px;
-    }
-
-    .spliter{
-        margin-top: -15px;
-    }
-    .zona2{
-        width: 320px;
-        margin-top: 330px;
-    }
-
-    .container2{
-        height: 160px;
-        width: 270px;
-    }
-
-    .boton2{
-        margin-left: -20px;
-        height: 50px;
-    }
-
-    .pContainer{
-        margin-top: -15px;
-    }
-
-    .p2{  
-        font-size: 10px;
-        color: hsl(186, 14%, 43%);
-    }
-
-    .p1{
-        font-size: 10px;
-    }
-
-    .RESET{
-        margin-top: 10px;
-        margin-right: -20px;
-        width: 200px;
-        height: 40px;
-    }
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
 }
