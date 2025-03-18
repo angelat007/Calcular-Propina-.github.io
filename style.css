@@ -54,6 +54,7 @@ label {
     margin-top: 20px;
     color: var(--dark-grayish-cyan);
     font-size: 14px;
+    text-align: left;
 }
 
 input[type="number"] {
@@ -62,7 +63,7 @@ input[type="number"] {
     font-size: 24px;
     border: none;
     background: var(--very-light-grayish-cyan);
-    border-radius: 8px;
+    border-radius: 5px;
     text-align: right;
 }
 
@@ -79,7 +80,7 @@ input[type="number"] {
     background: var(--very-dark-cyan);
     color: var(--white);
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -99,6 +100,10 @@ input[type="number"] {
 
 .result p {
     color: var(--white);
+}
+
+.area {
+    text-align: left;
 }
 
 .amount {
