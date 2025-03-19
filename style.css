@@ -144,9 +144,10 @@ p{
 }
 
 #error-msg {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
+    border: 2px solid rgb(164, 68, 68);
+    &::after{
+        content: "Can't be zero";
+    }
 }
 
 input[type=number]::-webkit-inner-spin-button,
