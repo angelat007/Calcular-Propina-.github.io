@@ -8,6 +8,8 @@ let buttons = document.querySelectorAll('.tip-btn');
 
 let alert = document.querySelector('#error-msg');
 
+let butonReset = document.querySelector('#reset-btn');
+
 buttons.forEach(element => {
     element.addEventListener('click', event => {
         let billNumber = parseFloat(bill.value) || 0; // Obtener el valor actual del bill
@@ -22,10 +24,10 @@ buttons.forEach(element => {
         }
 
 
-        people.addEventListener('input', ()=>{
+        people.addEventListener('input', () => {
             peopleNumber = parseInt(people.value);
 
-            if (peopleNumber == 0 ){
+            if (peopleNumber == 0) {
                 people.computedStyleMap.bordercolor = 'red';
                 alert.classList.add('error-msg')
             }
@@ -40,3 +42,12 @@ buttons.forEach(element => {
         totalResult.innerText = `$${totalPerPerson.toFixed(2)}`;
     });
 });
+
+
+//funcion buton reset
+butonReset.addEventListener('click', () => {
+    bill.value = "";
+    billNumber = "";
+    people.value = "";
+    peopleNumber = "";
+})
