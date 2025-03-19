@@ -111,6 +111,17 @@ input[type="number"] {
     color: var(--strong-cyan);
 }
 
+#tip-amount,
+#total-amount{
+    color: var(--strong-cyan);
+    text-align: right;
+    margin-top: -50px;
+}
+
+p{
+    margin-top: 20px;
+}
+
 #reset-btn {
     margin-top: 20px;
     padding: 15px;
