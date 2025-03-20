@@ -3,12 +3,15 @@ let people = document.querySelector('#people');
 
 let tipResult = document.querySelector('#tip-amount');
 let totalResult = document.querySelector('#total-amount');
+let amount = document.querySelector('.amount');
 
 let buttons = document.querySelectorAll('.tip-btn');
 
 let alert = document.querySelector('#error-msg');
 
 let butonReset = document.querySelector('#reset-btn');
+
+let calculator = document.querySelector('.calculator');
 
 buttons.forEach(element => {
     element.addEventListener('click', event => {
@@ -42,6 +45,28 @@ buttons.forEach(element => {
         totalResult.innerText = `$${totalPerPerson.toFixed(2)}`;
     });
 });
+
+
+//funcion reset results
+function validar(){
+    let desabilitar = false;
+
+    if (bill.value === "") {
+        desabilitar = true;
+    }
+    
+    if (people.value ===""){
+        desabilitar = true;
+    }
+
+    if (desabilitar === true){
+        butonReset.disabled = true;
+    } else {
+        butonReset.disabled = false;
+    }
+}
+
+calculator.addEventListener('keyup', validar)
 
 
 //funcion buton reset

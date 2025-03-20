@@ -136,11 +136,15 @@ p{
 #reset-btn:disabled {
     background: var(--very-dark-cyan-disable);
     cursor: not-allowed;
-
 }
 
 .hidden {
     display: none;
+}
+
+.tip-btn:active,
+#reset-btn:active{
+    transform: scale(01.01);
 }
 
 #error-msg {
