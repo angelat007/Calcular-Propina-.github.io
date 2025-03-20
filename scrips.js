@@ -75,4 +75,11 @@ butonReset.addEventListener('click', () => {
     billNumber = "";
     people.value = "";
     peopleNumber = "";
+    // Restablecer los valores de los resultados
+    tipResult.value = "$0";
+    totalResult.value = "$0";
+    tipResult.innerText = "$0";
+    totalResult.innerText = "$0";
+    // Deshabilitar el botón reset de nuevo
+    butonReset.disabled = true;
 })
